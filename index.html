@@ -10,7 +10,7 @@
     <script type="text/javascript" src="./jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<nav id="global_nav">
+<nav id="global_nav" style="display: none">
   <ul id="nav_ul">
     <li><a class="barText" href="#" id="AppName">Lycium在线三国杀卡牌制作器V0.61</a></li>
     <li><a class="barText" href="https://www.bilibili.com/video/BV19P4y1j7n6/" target="_blank">反馈建议</a></li>
@@ -28,6 +28,12 @@
     <div class="block">
         <div class="verticalBlock">
             <button id="download_card">将卡牌下载到本地</button>
+        </div>
+        <br />
+        <div class="verticalBlock">
+            <input id="card_name" />
+            <button id="upload_card">保存到云端</button>
+            <button id="get_card">从云端下载</button>
         </div>
     </div>
     <div id="illustration_scaling" class="block">
@@ -163,12 +169,12 @@
 </div>
 </div>
 
-<div id="bottomBar" style="margin-top:20px; margin-bottom:20px; padding: 5px 5px; background: #d5d5d5;">
+<!-- <div id="bottomBar" style="margin-top:20px; margin-bottom:20px; padding: 5px 5px; background: #d5d5d5;">
     <a class="bottomInfo" href="http://beian.miit.gov.cn/" target="_blank">吉ICP备2022000349号-1</a>
     &nbsp&nbsp
     <img src="resources/备案图标.png" style="width:20px; height:20px;">
     <a class="bottomInfo" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=22010402001039" target="_blank">吉公网安备22010402001039号</a>
-</div>
+</div> -->
 </body>
     <script type="module" src="./index.js"></script>
 </html>
