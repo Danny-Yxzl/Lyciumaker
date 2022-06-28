@@ -1305,7 +1305,7 @@ function UPLOAD(img) {
     const cardJson = JSON.stringify(cardInfo);
     console.log(cardInfo);
     $.post(
-        "//sgs.yxzl.top/api/",
+        "//sgs.qdzx.icu/api/",
         { data: cardJson, name: $("#card_name").val() },
         data => {
             console.log(data);
@@ -1334,10 +1334,12 @@ $("#upload_card").click(() => {
         UPLOAD(URLData);
         canvas = null;
     };
-    img.src = URL.createObjectURL(importIllustrationInput.files[0]);
+    img.src = URL.createObjectURL(
+        importIllustrationInput.files[0] || "./resources/刘备-六星耀帝.png"
+    );
 });
 $("#get_card").click(() => {
-    $.get("//sgs.yxzl.top/api/" + $("#card_name").val(), data => {
+    $.get("//sgs.qdzx.icu/api/" + $("#card_name").val(), data => {
         const cardInfo = JSON.parse(data);
         // console.log(cardInfo);
         importIllustration(cardInfo.img);
